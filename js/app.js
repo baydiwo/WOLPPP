@@ -6,7 +6,7 @@ function AlertController() {
 (function() {
 	var app = angular.module('wolppp', ['angular-loading-bar', 'ngAnimate'])
 	.config(function(cfpLoadingBarProvider) {
-	    cfpLoadingBarProvider.includeSpinner = false, 
+	    cfpLoadingBarProvider.includeSpinner = false,
 	    cfpLoadingBarProvider.latencyThreshold = 500
 	});
 
