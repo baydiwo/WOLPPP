@@ -30,7 +30,7 @@
 					</a>
 				</div>
 				<div class="overlay overlay-scale">
-					<button type="button" class="overlay-close">Close</button>
+					<button type="button" class="overlay-close"><i class="fa fa-times" aria-hidden="true"></i></button>
 					<div class="info">
 						<div class="description description--grid">
 							<div class="the-image">
@@ -38,7 +38,7 @@
 							</div>
 							<div class="wall-info ">
 								<div class="liked"></div>
-								<div class="col2">
+								<div class="image-info">
 									<h3><?php the_title(); ?></h3>
 									<?php $artist_name = get_field('artist_name'); ?>
 
@@ -46,7 +46,6 @@
 									<a href="<?php the_field('website'); ?>" title="" class="link"><?php the_field('website'); ?></a>
 									<?php the_content();?>
 								</div>
-								<div class="col2">
 
 									<?php /*<ul id="accordion" class="accordion">
 								        <h1><i class="fa fa-download"></i>Download</h1>

@@ -38,7 +38,8 @@ a {
   width: 20%;
   float: left; }
   .description .the-image img {
-    max-height: 88vh; }
+    max-height: 88vh;
+    width: 100%; }
 
 .description .like {
   width: 100%; }
@@ -46,9 +47,12 @@ a {
 .description .wall-info {
   color: #444e66;
   width: 80%;
-  float: left; }
+  float: left;
+  padding-left: 20px; }
   .description .wall-info h4 {
     margin: 0; }
+  .description .wall-info .image-info {
+    text-align: left; }
 
 .description .col2 {
   float: left;
@@ -198,18 +202,15 @@ nav ul li {
 
 /* Overlay closing cross */
 .overlay .overlay-close {
-  width: 80px;
-  height: 80px;
   position: absolute;
   right: 20px;
   top: 20px;
   overflow: hidden;
   border: none;
-  background: url(../img/cross.png) no-repeat center center #FFF;
-  text-indent: 200%;
   color: #000;
   outline: none;
-  z-index: 100; }
+  z-index: 100;
+  background: none; }
 
 /* Menu style */
 /* Effects */
