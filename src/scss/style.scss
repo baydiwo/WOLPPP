@@ -122,6 +122,8 @@ a {
 
         .image-info {
             text-align:left;
+            float:left;
+            width:70%;
         }
     }
 
@@ -176,10 +178,11 @@ a {
 }
 
  .accordion {
-    width: 100%;
+    width: 30%;
     max-width: 330px;
     margin: 0px;
     background: #F1F2F2;
+    float:left;
 
     @include mobile {
         margin:0 auto;
