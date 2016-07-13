@@ -34,7 +34,7 @@
 					<div class="info">
 						<div class="description description--grid">
 							<div class="the-image">
-								<img src="http://localhost:8888/wolppp/wp-content/uploads/2016/06/wlp-1200x2126.jpg">
+								<?php the_post_thumbnail(); ?>
 							</div>
 							<div class="wall-info ">
 								<div class="liked"></div>
