@@ -80,9 +80,10 @@ if ( typeof define === 'function' && define.amd ) {
 })( window );
 
 (function() {
-    var triggerBttn = document.getElementById( 'trigger-overlay' ),
-        overlay = document.querySelector( 'div.overlay' ),
-        closeBttn = overlay.querySelector( 'button.overlay-close' );
+    var triggerBttn = document.getElementById( 'trigger-overlay-1' ),
+        // overlay = document.getElementById( 'overlay-1' ),
+        // closeBttn = overlay.querySelector( 'button.overlay-close' );
+        // closeBttn = document.getElementById( 'overlay-close-1' );
         transEndEventNames = {
             'WebkitTransition': 'webkitTransitionEnd',
             'MozTransition': 'transitionend',
@@ -93,7 +94,21 @@ if ( typeof define === 'function' && define.amd ) {
         transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
         support = { transitions : Modernizr.csstransitions };
 
-    function toggleOverlay() {
+    $('.grid .grid__item[id]').click(function() {
+        ids = this.id;
+        var num = ids.replace( /^\D+/g, '');
+        var o = 'overlay-'+num;
+        toggleOverlay(o);
+    });
+    $('.grid .overlay [id]').click(function() {
+        ids = this.id;
+        var num = ids.replace( /^\D+/g, '');
+        var o = 'overlay-'+num;
+        toggleOverlay(o);
+    });
+
+    function toggleOverlay(o) {
+        overlay = document.getElementById( o )
         if( classie.has( overlay, 'open' ) ) {
             classie.remove( overlay, 'open' );
             classie.add( overlay, 'close' );
@@ -116,10 +131,16 @@ if ( typeof define === 'function' && define.amd ) {
         }
     }
 
-    triggerBttn.addEventListener( 'click', toggleOverlay );
-    closeBttn.addEventListener( 'click', toggleOverlay );
+    // triggerBttn.addEventListener( 'click', toggleOverlay );
+    // closeBttn.addEventListener( 'click', toggleOverlay );
+
+
 })();
 
+$(document).ready(function() {
+
+
+});
 
 // accordion
 $(function() {
