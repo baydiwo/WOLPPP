@@ -1,5 +1,6 @@
 .test {
-  width: 100%; }
+  width: 100%;
+  color: #000; }
 
 a {
   color: #677496;
@@ -12,6 +13,10 @@ a {
 .img-responsive {
   width: 100%;
   height: auto; }
+
+.container, footer {
+  width: 100vw;
+  float: left; }
 
 .content {
   margin-top: 30px; }
@@ -38,8 +43,8 @@ a {
   width: 20%;
   float: left; }
   .description .the-image img {
-    max-height: 88vh;
-    width: 100%; }
+    width: 100%;
+    height: auto; }
 
 .description .like {
   width: 100%; }
@@ -52,7 +57,9 @@ a {
   .description .wall-info h4 {
     margin: 0; }
   .description .wall-info .image-info {
-    text-align: left; }
+    text-align: left;
+    float: left;
+    width: 70%; }
 
 .description .col2 {
   float: left;
@@ -94,10 +101,11 @@ a {
   margin-right: 10px; }
 
 .accordion {
-  width: 100%;
+  width: 30%;
   max-width: 330px;
   margin: 0px;
-  background: #F1F2F2; }
+  background: #F1F2F2;
+  float: left; }
   @media (max-width: 995px) {
     .accordion {
       margin: 0 auto; } }
@@ -233,6 +241,50 @@ nav ul li {
   text-align: center;
   padding: 30px; }
 
+footer {
+  background: #444e66;
+  color: #f1f2f2;
+  margin-top: 50px;
+  padding-bottom: 50px;
+  position: relative; }
+  footer:before {
+    height: 2px;
+    content: "";
+    position: absolute;
+    bottom: 53px;
+    left: 0;
+    width: 100%;
+    background-color: #667395; }
+  footer .footer-menu {
+    float: left;
+    width: 40%; }
+    footer .footer-menu nav {
+      float: left;
+      margin: 0; }
+      footer .footer-menu nav ul {
+        float: left;
+        padding-left: 0; }
+        footer .footer-menu nav ul a {
+          color: #f1f2f2; }
+    footer .footer-menu img {
+      margin-top: 40px;
+      width: 100%; }
+  footer .copy {
+    width: 50%;
+    float: left;
+    padding: 0 20px;
+    color: #667395; }
+  footer .footer-logo {
+    width: 10%;
+    float: left;
+    position: relative;
+    height: 140px; }
+    footer .footer-logo img {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0; }
+
 @media screen and (max-height: 30.5em) {
   .overlay nav {
     height: 70%;
@@ -240,9 +292,39 @@ nav ul li {
   .overlay ul li {
     min-height: 34px; } }
 
+@media (max-width: 480px) {
+  .grid__item {
+    width: 100%; } }
+
 @media (max-width: 995px) {
-  .content {
-    position: relative; }
+  .grid {
+    width: 100%; }
   .preview {
     position: absolute;
-    top: 0; } }
+    top: 0; }
+  .overlay {
+    position: absolute;
+    height: auto;
+    top: -240px; }
+  .info {
+    padding: 0;
+    max-width: 100%;
+    width: 100%; }
+  .description .the-image {
+    width: 100%; }
+  .description .wall-info {
+    padding-left: 0;
+    width: 100%; }
+    .description .wall-info h3, .description .wall-info h4, .description .wall-info p {
+      color: white; }
+    .description .wall-info .image-info {
+      width: 100%;
+      background: #444e66;
+      padding: 0 20px; }
+  .accordion {
+    width: 100%; }
+  footer .footer-logo, footer .copy, footer .footer-menu {
+    width: 100%; }
+  footer .footer-logo {
+    width: 30%;
+    height: 30px; } }
