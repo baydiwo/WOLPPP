@@ -69,6 +69,10 @@ a {
 }
 
 // main style
+.container, footer {
+    width:100vw;
+    float:left;
+}
 .content {
     margin-top: 30px;
 }
@@ -103,7 +107,7 @@ a {
         float: left;
 
         img {
-            max-height:88vh;
+            // max-height:88vh;
             width:100%;
             height:auto;
         }
@@ -390,6 +394,68 @@ nav {
   padding:30px;
 }
 
+footer {
+    background:$black;
+    color:$cream;
+    margin-top:50px;
+    padding-bottom: 50px;
+    position: relative;
+
+    &:before {
+        height:2px;
+        content:"";
+        position:absolute;
+        bottom: 53px;
+        left:0;
+        width:100%;
+        background-color: #667395;
+    }
+
+    .footer-menu {
+        float:left;
+        width:40%;
+
+        nav {
+            float:left;
+            margin:0;
+
+            ul {
+                float:left;
+                padding-left:0;
+
+                a {
+                    color:$cream;
+                }
+            }
+        }
+
+        img {
+            margin-top:40px;
+            width:100%;
+        }
+    }
+    .copy {
+        width:50%;
+        float:left;
+        padding:0 20px;
+        color:#667395;
+    }
+    .footer-logo {
+        width:10%;
+        float:left;
+        position:relative;
+        height:140px;
+
+        img {
+            width:100%;
+            position: absolute;
+            left:0;
+            bottom:0;
+        }
+    }
+
+}
+
 @media screen and (max-height: 30.5em) {
     .overlay nav {
         height: 70%;
@@ -399,13 +465,67 @@ nav {
         min-height: 34px;
     }
 }
+
+@include smaller-mobile {
+    .grid__item {
+        width:100%;
+    }
+}
 @include mobile {
+    .grid {
+        width:100%;
+    }
     .content {
-        position: relative;
+        // position: relative;
     }
 
     .preview {
         position: absolute;
         top:0;
     }
-}
+
+    .overlay {
+        position: absolute;
+        height:auto;
+        top:-240px;
+    }
+
+    .info {
+        padding:0;
+        max-width:100%;
+        width:100%;
+    }
+
+    .description {
+        .the-image {
+            width:100%;
+        }
+
+        .wall-info {
+            padding-left:0;
+            width:100%;
+
+            h3, h4 , p{
+                color:white;
+            }
+            .image-info {
+                width:100%;
+                background: $black;
+                padding:0 20px;
+            }
+        }
+    }
+    .accordion {
+        width:100%;
+    }
+
+    footer {
+        .footer-logo , .copy , .footer-menu {
+            width:100%;
+        }
+        .footer-logo {
+            width:30%;
+            height:30px;
+        }
+    }
+}//mobile

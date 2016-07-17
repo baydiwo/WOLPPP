@@ -32,7 +32,7 @@
 }
 
 body {
-	font-family: "Raleway", Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
+	// font-family: "Raleway", Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
 	color: #333;
 	background: #fff;
 	-webkit-font-smoothing: antialiased;
@@ -40,7 +40,6 @@ body {
 	overflow-y: scroll;
 	overflow-x: hidden;
 	width: 100vw;
-    height: 1000px;
 }
 
 a {
