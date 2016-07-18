@@ -36,7 +36,7 @@ a {
       left: 0; } }
 
 .description .the-image {
-  width: 20%;
+  width: 30%;
   float: left; }
   .description .the-image img {
     width: 100%;
@@ -47,15 +47,16 @@ a {
 
 .description .wall-info {
   color: #444e66;
-  width: 80%;
+  width: 70%;
   float: left;
-  padding-left: 20px; }
+  padding-left: 30px; }
   .description .wall-info h4 {
     margin: 0; }
   .description .wall-info .image-info {
     text-align: left;
     float: left;
-    width: 70%; }
+    width: 70%;
+    padding: 30px; }
 
 .description .col2 {
   float: left;
@@ -70,11 +71,12 @@ a {
   display: block;
   text-decoration: none;
   color: #ACB6CC;
-  padding: 0px 20px;
+  padding: 5px 20px;
   transition: all 0.25s ease;
   display: inline-block;
   font-weight: bold;
-  font-size: 15px; }
+  font-size: 0.875em;
+  margin-top: 10px; }
   .description a.link:hover {
     background: #ACB6CC;
     color: #444E66; }
@@ -87,7 +89,8 @@ a {
   font-size: 18px;
   font-weight: 700;
   padding: 10px 0;
-  border-bottom: 1px solid #D1D3D4; }
+  border-bottom: 1px solid #D1D3D4;
+  text-align: left; }
 
 .accordion h1 a {
   color: #c12c42;
@@ -193,7 +196,9 @@ nav ul li {
     color: #677496; }
 
 .grid__item {
-  float: left; }
+  float: left;
+  cursor: pointer;
+  cursor: hand; }
 
 /* Overlay style */
 .overlay {
@@ -316,7 +321,7 @@ footer {
     .description .wall-info .image-info {
       width: 100%;
       background: #444e66;
-      padding: 0 20px; }
+      padding: 30px; }
   .accordion {
     width: 100%; }
   footer .footer-logo, footer .copy, footer .footer-menu {
