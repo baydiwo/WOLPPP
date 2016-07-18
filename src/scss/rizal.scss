@@ -1,4 +1,55 @@
-.test {
-    width:100%;
-    color: #000;
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,800,300,400italic);
+
+/*----------------------------- TYPOGRAPHY -----------------------------*/
+
+body {
+	font-size: 100%; /* 16px */}
+
+.title {
+	font-size: 1.125em; /* 18px */
+    margin: 10px 0 5px 0;
+    font-weight: 800;}
+
+.artist {
+    font-size: 0.875em; /* 14px */}
+
+.image-info h3 {
+	font-size: 2em; /* 32px */
+	font-weight: 300;
+	margin: 0 0 10px;}
+
+.image-info h4 {
+	font-size: 1.125em; /* 18px */}
+	
+.description a.link {
+  border: 1px solid #ACB6CC;
+  border-radius: 30px;
+  display: block;
+  text-decoration: none;
+  color: #ACB6CC;
+  padding: 5px 20px;
+  transition: all 0.25s ease;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 0.875em;
+  margin-top: 10px;}
+  
+  
+.description a.link:hover {
+  background: #ACB6CC;
+  color: #444E66; }
+  
+.image-info p {
+	font-size: 1.125em;
+	line-height: 1.5em;
 }
+
+  footer .copy {
+  	font-size: 0.875em; /* 14px */
+	line-height: 1.250em;
+    width: 50%;
+    float: left;
+    padding: 0 25px;
+    color: #acb7cd; }
+
+/*----------------------------- END OF TYPOGRAPHY -----------------------------*/
