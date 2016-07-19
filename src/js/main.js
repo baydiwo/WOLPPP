@@ -131,7 +131,7 @@ if ( typeof define === 'function' && define.amd ) {
         else if( !classie.has( overlay, 'close' ) ) {
             classie.add( overlay, 'open' );
             $('.overlay').css('height', docH);
-            $( "body,html" ).scrollTop( 0 );
+            // $( "body,html" ).scrollTop( 0 );
         }
     }
 
@@ -143,7 +143,17 @@ if ( typeof define === 'function' && define.amd ) {
 
 $(document).ready(function() {
 
- console.log($(document).height());
+    console.log($(document).height());
+    $(".button a").click(function(){
+        $(".menu-overlay").fadeToggle(200);
+       $(this).toggleClass('btn-open').toggleClass('btn-close');
+    });
+});
+
+$('.menu-overlay').on('click', function(){
+    $(".menu-overlay").fadeToggle(200);
+    $(".button a").toggleClass('btn-open').toggleClass('btn-close');
+    open = false;
 });
 
 // accordion

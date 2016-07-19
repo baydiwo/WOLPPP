@@ -1,4 +1,6 @@
 @import "rizal";
+@import "overlay-menu";
+@import "typography";
 
 $cream: #f1f2f2;
 $black: #444e66;
@@ -144,16 +146,16 @@ a {
 
     a.link {
         border: 1px solid #ACB6CC;
-    border-radius: 30px;
-    display: block;
-    text-decoration: none;
-    color: #ACB6CC;
-    padding: 5px 20px;
-    transition: all 0.25s ease;
-    display: inline-block;
-    font-weight: bold;
-    font-size: 0.875em;
-    margin-top: 10px;
+        border-radius: 30px;
+        display: block;
+        text-decoration: none;
+        color: #ACB6CC;
+        padding: 5px 20px;
+        transition: all 0.25s ease;
+        display: inline-block;
+        font-weight: bold;
+        font-size: 0.875em;
+        margin-top: 10px;
 
         &:hover {
             background: #ACB6CC;
@@ -310,6 +312,7 @@ nav {
             a {
                 float:left;
                 color:#677496;
+                padding:0 10px ;
             }
         }
     }
@@ -343,34 +346,6 @@ nav {
     background:none;
 }
 
-/* Menu style */
-.overlay nav {
-    // text-align: center;
-    // position: relative;
-    // top: 50%;
-    // height: 60%;
-    // -webkit-transform: translateY(-50%);
-    // transform: translateY(-50%);
-}
-
-.overlay ul {
-    // list-style: none;
-    // padding: 0;
-    // margin: 0 auto;
-    // display: inline-block;
-    // height: 100%;
-    // position: relative;
-}
-
-.overlay ul li {
-    // display: block;
-    // height: 20%;
-    // height: calc(100% / 5);
-    // min-height: 54px;
-    // -webkit-backface-visibility: hidden;
-    // backface-visibility: hidden;
-}
-
 /* Effects */
 .overlay-scale {
     visibility: hidden;
@@ -384,7 +359,7 @@ nav {
 .overlay-scale.open {
     visibility: visible;
     opacity: 1;
-    z-index:1;
+    z-index:4;
     -webkit-transform: scale(1);
     transform: scale(1);
     -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
@@ -474,8 +449,15 @@ footer {
     .grid__item {
         width:100%;
     }
+    .button {
+        display:inline;
+    }
+    nav.menu {
+        display:none;
+    }
 }
 @include mobile {
+
     .grid {
         width:100%;
     }

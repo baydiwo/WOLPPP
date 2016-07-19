@@ -30,10 +30,43 @@
 </head>
 
 <body>
+	<div class="menu-overlay">
+		<div class="wrap">
+			<div class="mobile-logo">
+				<img src="<?php echo get_template_directory_uri() ?>/img/logo-footer.png" alt="WOLPPP">
+			</div>
+			<?php    /**
+					* Displays a navigation menu
+					* @param array $args Arguments
+					*/
+					$args = array(
+						'theme_location' => '',
+						'menu' => '',
+						'container' => 'ul',
+						'container_class' => 'menu-{menu-slug}-container',
+						'container_id' => '',
+						'menu_class' => 'wrap-nav',
+						'menu_id' => '',
+						'echo' => true,
+						'fallback_cb' => 'wp_page_menu',
+						'before' => '',
+						'after' => '',
+						'link_before' => '',
+						'link_after' => '',
+						'items_wrap' => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
+						'depth' => 0,
+						'walker' => ''
+					);
+
+					wp_nav_menu( $args ); ?>
+		</div>
+	</div>
 	<div class="container">
 		<header>
            <div class="logo"><img src="<?php echo get_template_directory_uri() ?>/img/wolppplogo_big.png" /></div>
-           <nav class="codrops-demos">
+           <div class="button">
+				<a class="btn-open" href="#"></a>
+			</div>
 				<?php    /**
 					* Displays a navigation menu
 					* @param array $args Arguments
@@ -58,5 +91,4 @@
 					);
 
 					wp_nav_menu( $args ); ?>
-			</nav>
         </header>
