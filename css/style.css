@@ -1,3 +1,175 @@
+/*styling open close button*/
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700,500,300);
+.button {
+  display: none;
+  position: absolute;
+  right: 30px;
+  top: 50px;
+  z-index: 3;
+  font-size: 30px; }
+
+.button a {
+  text-decoration: none; }
+
+.btn-open:after {
+  color: #333;
+  content: "\f0c9";
+  font-family: "FontAwesome";
+  transition-property: all .2s linear 0s;
+  -moz-transition: all .2s linear 0s;
+  -webkit-transition: all .2s linear 0s;
+  -o-transition: all .2s linear 0s; }
+
+.btn-open:hover:after {
+  color: #acb7cd; }
+
+.btn-close {
+  position: fixed;
+  top: 50px;
+  right: 30px; }
+  .btn-close:after {
+    color: #fff;
+    content: "\f00d";
+    font-family: "FontAwesome";
+    transition-property: all .2s linear 0s;
+    -moz-transition: all .2s linear 0s;
+    -webkit-transition: all .2s linear 0s;
+    -o-transition: all .2s linear 0s; }
+
+.btn-close:hover:after {
+  color: #acb7cd; }
+
+/*overlay*/
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #444e67;
+  overflow: auto;
+  z-index: 2; }
+
+.wrap {
+  color: #e9e9e9;
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative; }
+  .wrap:after {
+    position: absolute;
+    content: "";
+    bottom: -170px;
+    left: 0;
+    background: url("../img/bg-mobile-menu.jpg") no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 170px; }
+  .wrap .mobile-logo {
+    margin: 100px 0 0 20px; }
+    .wrap .mobile-logo img {
+      width: 40%;
+      float: left; }
+
+.wrap ul.wrap-nav {
+  border-bottom: 1px solid #575757;
+  text-transform: capitalize;
+  padding: 100px 0px 100px; }
+
+.wrap ul.wrap-nav li {
+  font-size: 20px;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  position: relative;
+  text-align: left;
+  padding-left: 40%; }
+
+.wrap ul.wrap-nav li a {
+  color: #abb6cc;
+  display: block;
+  padding: 8px 0;
+  text-decoration: none;
+  transition-property: all .2s linear 0s;
+  -moz-transition: all .2s linear 0s;
+  -webkit-transition: all .2s linear 0s;
+  -o-transition: all .2s linear 0s; }
+
+.wrap ul.wrap-nav li a:hover {
+  color: #f0f0f0; }
+
+.wrap ul.wrap-nav ul {
+  padding: 20px 0; }
+
+.wrap ul.wrap-nav ul li {
+  display: block;
+  font-size: 13px;
+  width: 100%;
+  color: #e9e9e9; }
+
+.wrap ul.wrap-nav ul li a {
+  color: #f0f0f0; }
+
+.wrap ul.wrap-nav ul li a:hover {
+  color: #34B484; }
+
+/*----------------------------- TYPOGRAPHY -----------------------------*/
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 100%;
+  /* 16px */ }
+
+.title {
+  font-size: 1.125em;
+  /* 18px */
+  margin: 10px 0 5px 0;
+  font-weight: 800; }
+
+.artist {
+  font-size: 0.875em;
+  /* 14px */ }
+
+.image-info h3 {
+  font-size: 2em;
+  /* 32px */
+  font-weight: 300;
+  margin: 0 0 10px; }
+
+.image-info h4 {
+  font-size: 1.125em;
+  /* 18px */ }
+
+.description a.link {
+  border: 1px solid #ACB6CC;
+  border-radius: 30px;
+  display: block;
+  text-decoration: none;
+  color: #ACB6CC;
+  padding: 5px 20px;
+  transition: all 0.25s ease;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 0.875em;
+  margin-top: 10px; }
+
+.description a.link:hover {
+  background: #ACB6CC;
+  color: #444E66; }
+
+.image-info p {
+  font-size: 1.125em;
+  line-height: 1.5em; }
+
+footer .copy {
+  font-size: 0.875em;
+  /* 14px */
+  line-height: 1.250em;
+  width: 50%;
+  float: left;
+  padding: 0 25px;
+  color: #acb7cd; }
+
+/*----------------------------- END OF TYPOGRAPHY -----------------------------*/
 a {
   color: #677496;
   transition: all ease .2s; }
@@ -193,7 +365,8 @@ nav ul li {
     content: ""; }
   nav ul li a {
     float: left;
-    color: #677496; }
+    color: #677496;
+    padding: 0 10px; }
 
 .grid__item {
   float: left;
@@ -221,7 +394,6 @@ nav ul li {
   z-index: 100;
   background: none; }
 
-/* Menu style */
 /* Effects */
 .overlay-scale {
   visibility: hidden;
@@ -232,7 +404,7 @@ nav ul li {
 .overlay-scale.open {
   visibility: visible;
   opacity: 1;
-  z-index: 1;
+  z-index: 4;
   transform: scale(1);
   transition: transform 0.4s, opacity 0.4s; }
 
@@ -295,7 +467,11 @@ footer {
 
 @media (max-width: 480px) {
   .grid__item {
-    width: 100%; } }
+    width: 100%; }
+  .button {
+    display: inline; }
+  nav.menu {
+    display: none; } }
 
 @media (max-width: 995px) {
   .grid {
