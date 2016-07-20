@@ -29,7 +29,10 @@
 	<?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
+
+	<?php echo dslc_hf_get_header(); ?>
+
 	<div class="menu-overlay">
 		<div class="wrap">
 			<div class="mobile-logo">

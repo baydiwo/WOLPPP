@@ -55,20 +55,19 @@
         <!-- content     -->
     </footer>
 
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src="<?php echo get_template_directory_uri() ?>/js/vendor/modernizr-custom.js"></script>
+    <?php echo dslc_hf_get_footer(); ?>
+
+    <?php wp_footer(); ?>
+
+    <!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
+    <!-- <script src="<?php echo get_template_directory_uri() ?>/js/vendor/modernizr-custom.js"></script> -->
     <!--<script src="<?php echo get_template_directory_uri() ?>/js/vendor/cbpAnimatedHeader.js"></script>
     <script src="<?php echo get_template_directory_uri() ?>/js/vendor/imagesloaded.pkgd.min.js"></script>
     <script src="<?php echo get_template_directory_uri() ?>/js/vendor/masonry.pkgd.min.js"></script>
     <script src="<?php echo get_template_directory_uri() ?>/js/vendor/classie.js"></script>
     <script src="<?php echo get_template_directory_uri() ?>/js/vendor/jquery.popupoverlay.js"></script>
     <script src="<?php echo get_template_directory_uri() ?>/js/vendor/main.js"></script> -->
-    <script src="<?php echo get_template_directory_uri() ?>/js/scripts.js"></script>
-
-    <script>
-
-    </script>
-    <?php wp_footer(); ?>
+    <!-- <script src="<?php echo get_template_directory_uri() ?>/js/scripts.js"></script> -->
 </body>
 
 </html>

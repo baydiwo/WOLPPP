@@ -181,5 +181,5 @@ $(function() {
         };
     }
 
-    var accordion = new Accordion($('#accordion'), false);
+    var accordion = new Accordion($('.accordion'), false);
 });

@@ -61,9 +61,7 @@
 	                                        <li>
 	                                            <?php if( $image ): ?>
 	                                                <a href="<?php echo $image['url']; ?>">
-	                                            <?php endif; ?>
 	                                                <?php echo $image['title'] ?>
-	                                            <?php if( $image ): ?>
 	                                                </a>
 	                                            <?php endif; ?>
 	                                        </li>
