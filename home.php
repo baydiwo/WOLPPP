@@ -40,7 +40,9 @@
 								<?php the_post_thumbnail(); ?>
 							</div>
 							<div class="wall-info ">
-								<div class="liked"></div>
+								<div class="likes">
+									<?php echo get_simple_likes_button( get_the_ID() ); ?>
+								</div>
 								<div class="image-info">
 									<h3><?php the_title(); ?></h3>
 									<?php $artist_name = get_field('artist_name'); ?>

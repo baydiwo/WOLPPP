@@ -1,6 +1,7 @@
 @import "rizal";
 @import "overlay-menu";
 @import "typography";
+@import "simple-like";
 
 $cream: #f1f2f2;
 $black: #444e66;
@@ -122,6 +123,19 @@ a {
         width:70%;
         float:left;
         padding-left:30px;
+
+        .likes {
+            text-align: left;
+            padding: 0px 30px;
+            margin-top: 50px;
+
+            .sl-wrapper {
+                    border: 1px solid #acb6cc;
+                    border-radius: 15px;
+                    padding: 2px 8px;
+                    text-align: left;
+            }
+        }
 
         h4 {
             margin:0;
