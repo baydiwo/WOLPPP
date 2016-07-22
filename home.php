@@ -50,6 +50,10 @@
 									<h4 class="artist">By <?php echo $artist_name['display_name']; ?></h4>
 									<a href="<?php the_field('website'); ?>" title="" class="link"><?php the_field('website'); ?></a>
 									<?php the_content();?>
+
+									<a class="link" href="https://www.facebook.com/sharer/sharer.php?u=http://wolppp.com">Share on Facebook</a>
+									<a class="link" href="https://twitter.com/home?status=<?php the_title() ?>:<?php the_post_thumbnail_url(); ?>">Share on Twitter</a>
+									<a class="link" href="https://pinterest.com/pin/create/button/?url=htpp://wolppp.com&media=<?php the_post_thumbnail_url(); ?>&description=<?php the_title() ?>">Pin on Pinterest</a>
 								</div>
 								<!-- Contenedor -->
 								<ul id="accordion" class="accordion">
