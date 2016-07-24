@@ -1,5 +1,11 @@
-/*styling open close button*/
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,700,500,300);
+textarea:focus, input:focus {
+  outline: none; }
+
+*:focus {
+  outline: none; }
+
+/*styling open close button*/
 .button {
   display: none;
   position: absolute;
@@ -12,7 +18,7 @@
   text-decoration: none; }
 
 .btn-open:after {
-  color: #333;
+  color: #677496;
   content: "\f0c9";
   font-family: "FontAwesome";
   transition-property: all .2s linear 0s;
@@ -25,7 +31,7 @@
 
 .btn-close {
   position: fixed;
-  top: 50px;
+  top: 95px;
   right: 30px; }
   .btn-close:after {
     color: #fff;
@@ -72,7 +78,7 @@
       float: left; }
 
 .wrap ul.wrap-nav {
-  border-bottom: 1px solid #575757;
+  border-bottom: 1px solid #677496;
   text-transform: capitalize;
   padding: 100px 0px 100px; }
 
@@ -118,6 +124,9 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 100%;
   /* 16px */ }
+
+nav li {
+  font-weight: 800; }
 
 .title {
   font-size: 1.125em;
@@ -188,11 +197,11 @@ a.liked {
 a.liked:hover,
 a.liked:active,
 a.liked:focus {
-  color: #666666; }
+  color: #ACB6CC; }
 
 a.liked span.sl-count,
 .sl-count {
-  color: #666666; }
+  color: #ACB6CC; }
 
 /* Icon */
 .sl-icon {
@@ -202,8 +211,8 @@ a.liked span.sl-count,
 
 .sl-icon svg {
   fill: currentColor;
-  width: 1em;
-  height: 1em; }
+  width: 0.8em;
+  height: 0.8em; }
 
 .sl-icon svg:after {
   content: "";
@@ -215,13 +224,16 @@ a.liked span.sl-count,
 
 /* Count */
 .sl-count {
-  font-size: 20px;
-  text-transform: uppercase;
+  font-size: 14px;
   vertical-align: top;
-  line-height: 14px;
-  font-weight: bold; }
+  line-height: 18px;
+  font-weight: bold;
+  color: #ACB6CC; }
 
 /* Loader */
+#sl-loader {
+  display: none; }
+
 .loader,
 .loader:before,
 .loader:after {
@@ -261,6 +273,9 @@ a.liked span.sl-count,
   40% {
     box-shadow: 0 -0.3em rgba(0, 0, 0, 0.2);
     height: 1em; } }
+
+a:hover, a:active, a:focus {
+  outline: 0; }
 
 a {
   color: #677496;
@@ -316,13 +331,14 @@ a {
   padding-left: 30px; }
   .description .wall-info .likes {
     text-align: left;
-    padding: 0px 30px;
-    margin-top: 50px; }
+    padding: 0;
+    margin: 50px 0 20px 0; }
     .description .wall-info .likes .sl-wrapper {
       border: 1px solid #acb6cc;
       border-radius: 15px;
       padding: 2px 8px;
-      text-align: left; }
+      text-align: left;
+      margin: 0; }
   .description .wall-info h4 {
     margin: 0; }
   .description .wall-info .image-info {
@@ -349,7 +365,8 @@ a {
   display: inline-block;
   font-weight: bold;
   font-size: 0.875em;
-  margin-top: 10px; }
+  margin-top: 10px;
+  margin-right: 10px; }
   .description a.link:hover {
     background: #ACB6CC;
     color: #444E66; }
@@ -461,13 +478,13 @@ nav ul li {
   float: left;
   list-style-type: none; }
   nav ul li:before {
-    content: "/"; }
+    content: ""; }
   nav ul li:last-child:before {
     content: ""; }
   nav ul li a {
     float: left;
     color: #677496;
-    padding: 0 10px; }
+    padding: 0 15px; }
 
 .grid__item {
   float: left;
@@ -490,10 +507,16 @@ nav ul li {
   top: 20px;
   overflow: hidden;
   border: none;
-  color: #000;
+  color: #444e67;
   outline: none;
-  z-index: 100;
-  background: none; }
+  z-index: 1000;
+  background: #fff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%; }
+
+.icon-background {
+  color: #f1f2f2; }
 
 /* Effects */
 .overlay-scale {
@@ -563,6 +586,8 @@ footer {
   .overlay nav {
     height: 70%;
     font-size: 34px; }
+  nav.menu {
+    display: none; }
   .overlay ul li {
     min-height: 34px; } }
 
@@ -575,6 +600,8 @@ footer {
     display: none; } }
 
 @media (max-width: 995px) {
+  nav.menu {
+    display: none; }
   .grid {
     width: 100%; }
   .preview {
@@ -598,7 +625,7 @@ footer {
     .description .wall-info .image-info {
       width: 100%;
       background: #444e66;
-      padding: 30px; }
+      padding: 0 30px 30px 30px; }
   .accordion {
     width: 100%; }
   footer .footer-logo, footer .copy, footer .footer-menu {

@@ -55,6 +55,11 @@ $breakpoint-alpha: 480px; // adjust to your needs
 }
 
 //global style
+
+a:hover, a:active, a:focus {
+  outline: 0;
+}
+
 a {
     color:$grey;
     transition: all ease .2s;
@@ -126,14 +131,15 @@ a {
 
         .likes {
             text-align: left;
-            padding: 0px 30px;
-            margin-top: 50px;
+            padding: 0;
+            margin: 50px 0 20px 0;
 
             .sl-wrapper {
                     border: 1px solid #acb6cc;
                     border-radius: 15px;
                     padding: 2px 8px;
                     text-align: left;
+                    margin: 0;
             }
         }
 
@@ -170,6 +176,7 @@ a {
         font-weight: bold;
         font-size: 0.875em;
         margin-top: 10px;
+        margin-right: 10px;
 
         &:hover {
             background: #ACB6CC;
@@ -316,7 +323,7 @@ nav {
             list-style-type:none;
 
             &:before {
-                content:"/";
+                content:"";
             }
 
             &:last-child:before {
@@ -326,7 +333,7 @@ nav {
             a {
                 float:left;
                 color:#677496;
-                padding:0 10px ;
+                padding:0 15px ;
             }
         }
     }
@@ -354,10 +361,17 @@ nav {
     top: 20px;
     overflow: hidden;
     border: none;
-    color: #000;
+    color: #444e67;
     outline: none;
-    z-index: 100;
-    background:none;
+    z-index: 1000;
+    background:#fff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+.icon-background {
+    color: #f1f2f2;
 }
 
 /* Effects */
@@ -415,10 +429,10 @@ footer {
             ul {
                 float:left;
                 padding-left:0;
-
+                
                 a {
                     color:$cream;
-                }
+                } 
             }
         }
 
@@ -454,6 +468,9 @@ footer {
         height: 70%;
         font-size: 34px;
     }
+      nav.menu {
+        display:none;
+    }
     .overlay ul li {
         min-height: 34px;
     }
@@ -471,6 +488,10 @@ footer {
     }
 }
 @include mobile {
+    
+      nav.menu {
+        display:none;
+    }
 
     .grid {
         width:100%;
@@ -511,8 +532,9 @@ footer {
             .image-info {
                 width:100%;
                 background: $black;
-                padding: 30px;
+                padding: 0 30px 30px 30px;
             }
+
         }
     }
     .accordion {

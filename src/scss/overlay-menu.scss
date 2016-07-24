@@ -11,7 +11,7 @@
     text-decoration:none;
 }
 .btn-open:after {
-    color:#333;
+    color:#677496;
     content:"\f0c9";
     font-family:"FontAwesome";
     transition-property:all .2s linear 0s;
@@ -24,7 +24,7 @@
 }
 .btn-close {
     position: fixed;
-    top: 50px;
+    top: 95px;
     right: 30px;
 
     &:after {
@@ -79,7 +79,7 @@
     }
 }
 .wrap ul.wrap-nav {
-    border-bottom:1px solid #575757;
+    border-bottom:1px solid #677496;
     text-transform:capitalize;
     padding:100px 0px 100px;
 }

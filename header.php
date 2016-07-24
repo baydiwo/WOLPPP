@@ -16,9 +16,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php the_title(); ?> | WOLPPP</title>
-	<meta name="description" content="Effect inspiration for opening an image grid item." />
-	<meta name="keywords" content="image grid, effect, inspiration, css, javascript, animation, masonry" />
-	<meta name="author" content="Codrops" />
+	<meta name="description" content="Wolppp curates and showcases the best art/design 
+in a form of free downloadable digital wallpaper" />
+	<meta name="keywords" content="wallpaper, art, design, illustration, illustrator, visual, digital, artist, designer, download, free, ios, android, desktop, mobile" />
+	<meta name="author" content="Wolppp" />
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/css/normalize.css" />
@@ -66,7 +67,7 @@
 	</div>
 	<div class="container">
 		<header>
-           <div class="logo"><img src="<?php echo get_template_directory_uri() ?>/img/wolppplogo_big.png" /></div>
+           <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><div class="logo"><img src="<?php echo get_template_directory_uri() ?>/img/wolppplogo_big.png" /></a></div>
            <div class="button">
 				<a class="btn-open" href="#"></a>
 			</div>

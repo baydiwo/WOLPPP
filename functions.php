@@ -119,7 +119,7 @@ function wolppp_scripts() {
 	// wp_enqueue_script( 'wolppp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	// wp_enqueue_script( 'wolppp-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-	// wp_enqueue_script( 'jq', 'http://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js', array(),'20151215',true );
+	//wp_enqueue_script( 'jq', 'http://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js', array(),'20151215',true );
 	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr-custom.js', array(),'20151215',true );
 	wp_enqueue_script( 'simple-like', get_template_directory_uri() . '/js/vendor/simple-likes-public.js', array(),'20151215',true );
 	wp_enqueue_script( 'my-sript', get_template_directory_uri() . '/js/scripts.js', array(),'20151215',true );

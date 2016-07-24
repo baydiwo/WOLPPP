@@ -2,9 +2,10 @@
     /* Template Name: Home */
     get_header();
 ?>
-	<div class="banner">
+
+	<!-- <div class="banner">
 		<img src="<?php echo get_template_directory_uri() ?>/img/banner.jpg" alt="" class="img-responsive">
-	</div>
+	</div> -->
 		<div class="content">
 		<!-- open/close -->
 			<div class="grid">
@@ -33,17 +34,20 @@
 				</div>
 				<!-- overlay div -->
 				<div class="overlay overlay-scale" id="overlay-<?php echo $i; ?>">
-					<button type="button" id="overlay-close-<?php echo $i; ?>" class="overlay-close"><i class="fa fa-times" aria-hidden="true"></i></button>
+					<button type="button" id="overlay-close-<?php echo $i; ?>" class="overlay-close">
+                       <i class="fa fa-times"></i>
+                    </button>
 					<div class="info">
 						<div class="description description--grid">
 							<div class="the-image">
 								<?php the_post_thumbnail(); ?>
 							</div>
 							<div class="wall-info ">
-								<div class="likes">
-									<?php echo get_simple_likes_button( get_the_ID() ); ?>
-								</div>
+							
 								<div class="image-info">
+                                    <div class="likes">
+									   <?php echo get_simple_likes_button( get_the_ID() ); ?>
+								    </div>
 									<h3><?php the_title(); ?></h3>
 									<?php $artist_name = get_field('artist_name'); ?>
 
@@ -51,9 +55,10 @@
 									<a href="<?php the_field('website'); ?>" title="" class="link"><?php the_field('website'); ?></a>
 									<?php the_content();?>
 
-									<a class="link" href="https://www.facebook.com/sharer/sharer.php?u=http://wolppp.com">Share on Facebook</a>
-									<a class="link" href="https://twitter.com/home?status=<?php the_title() ?>:<?php the_post_thumbnail_url(); ?>">Share on Twitter</a>
-									<a class="link" href="https://pinterest.com/pin/create/button/?url=htpp://wolppp.com&media=<?php the_post_thumbnail_url(); ?>&description=<?php the_title() ?>">Pin on Pinterest</a>
+									<a class="link" href="https://www.facebook.com/sharer/sharer.php?u=http://wolppp.com"><i class="fa fa-facebook" aria-hidden="true"></i> Post it</a>
+									<a class="link" target="_blank" href="https://twitter.com/home?status=Wallpaper by at <?php the_title() ?> : <?php the_post_thumbnail_url(); ?>"><i class="fa fa-twitter" aria-hidden="true"></i> Tweet it</a>
+									<a class="link" href="https://pinterest.com/pin/create/button/?url=htpp://wolppp.com&media=<?php the_post_thumbnail_url(); ?>&description=<?php the_title() ?>"><i class="fa fa-pinterest-p" aria-hidden="true"></i> Pin it
+</a>
 								</div>
 								<!-- Contenedor -->
 								<ul id="accordion" class="accordion">
